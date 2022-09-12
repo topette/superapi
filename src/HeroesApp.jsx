@@ -1,7 +1,20 @@
-import { useState, useEffect } from "react";
 import "./App.css";
+import { AppRouter } from "./router/AppRouter";
 
-function App() {
+export function HeroesApp() {
+ 
+  return (
+    <>
+    <AppRouter />
+    </>
+  );
+}
+
+/*
+import { useState, useEffect } from "react";
+
+
+export function HeroesApp() {
   const [heroes, setHeroes] = useState([]);
 
   useEffect(() => {
@@ -17,9 +30,10 @@ function App() {
   };
 
   return (
+    <>
+    <AppRouter />
     <div className="App">
       <h1>
-        Hola Api
         {heroes.map((heroe) => {
           <div key="heroe.id">
             <h1>{heroe.nombre}</h1>
@@ -28,7 +42,8 @@ function App() {
         })}
       </h1>
     </div>
+    </>
   );
 }
 
-export default App;
+*/
