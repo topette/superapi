@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import heroesApi from "../../api/HeroesApi";
+import { Link } from "react-router-dom";
 
 export const MarvelPage = () => {
   const [getHeroes, setGetHeroes] = useState([]);
@@ -22,7 +23,7 @@ export const MarvelPage = () => {
     <>
       <h1 className="text-center font-bold text-6xl uppercase m-4">
         <span className="text-yellow-500">Top 20 </span>
-        <span className="text-white">Mejores Heroes de Marvel</span>
+        <span className="text-white">Mejores Héroes de Marvel</span>
       </h1>
       <div className="grid sm:grid-cols-4 gap-4">
         {getHeroes.map((heroe) => (
@@ -30,7 +31,7 @@ export const MarvelPage = () => {
             key={heroe.id}
             className="rounded-t-2xl shadow-2xl bg-gray-900 m-8"
           >
-            <img src={heroe.imagen} className="rounded-2xl w-full" srcset="" />
+            <img src={heroe.imagen} className="rounded-2xl w-full" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{heroe.nombre}</div>
               <p className="text-gray-500 text-base text-justify">
