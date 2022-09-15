@@ -1,7 +1,7 @@
-
+import './Loader.css'
 
 export const Loader = () => {
   return (
-    <div>Loader</div>
+    <span class="loader"></span>
   )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import heroesApi from "../../api/HeroesApi";
 import { Link } from "react-router-dom";
+import { Loader } from "../components/Loader";
 
 export const MarvelPage = () => {
   const [getHeroes, setGetHeroes] = useState([]);
@@ -18,6 +19,10 @@ export const MarvelPage = () => {
       console.log(error);
     }
   };
+
+  if(!getHeroes.length){
+    return (<div className="flex justify-center items-center mt-72"><Loader /></div>)
+  }
 
   return (
     <>
