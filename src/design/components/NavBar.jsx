@@ -34,7 +34,7 @@ export const NavBar = () => {
                 </NavLink>
                 <NavLink
                   className={({ isActive }) =>
-                    `bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium ${
+                    `bg-gray-700 hover:bg-red-900 text-white block px-3 py-2 rounded-md text-base font-medium ${
                       isActive ? "text-yellow-500" : ""
                     }`
                   }
@@ -45,7 +45,7 @@ export const NavBar = () => {
 
                 <NavLink
                   className={({ isActive }) =>
-                    `bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium ${
+                    `bg-gray-700 hover:bg-blue-900 text-white block px-3 py-2 rounded-md text-base font-medium ${
                       isActive ? "text-yellow-500" : ""
                     }`
                   }
